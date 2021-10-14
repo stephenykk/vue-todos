@@ -1,17 +1,44 @@
 {
   "name": "vue-todos",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "vue todos component compitable with vue2/3",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server",
+    "build": "webpack --env NODE_ENV=production",
+    "release": "npm run build && npm publish"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue": "2.x",
+    "vue": "2.x"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.2",
+    "@types/vue": "^2.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "css-loader": "^6.4.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.0.1",
+    "html-webpack-plugin": "^5.3.2",
+    "node-sass": "^6.0.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.0",
+    "url-loader": "^4.1.1",
     "vue-loader": "^15.9.8",
-    "webpack": "^5.58.2"
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
   }
 }
