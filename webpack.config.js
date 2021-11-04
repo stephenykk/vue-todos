@@ -20,13 +20,17 @@ module.exports = function (env) {
       index: resolve('src/index.ts'),
       example: resolve('example/index.ts')
     },
-    output: {
+    output: true ? {
       path: resolve('dist'),
       filename: '[name].js',
       publicPath: '/',
-      library: 'VueTodos',
+      library: 'VueTodos', // 有多个入口的话，这里导出的library会多次导出，并且后面覆盖前面的~~
       libraryTarget: 'umd',
       libraryExport: 'default'
+    } : {
+      path: resolve('dist'),
+      filename: '[name].js',
+      publicPath: '/',
     },
     devServer:
       process.env.USE_HTTPS === 'yes'
@@ -51,7 +55,7 @@ module.exports = function (env) {
             hot: true,
             open: true,
             static: {
-              directory: './public',
+              directory: './dist',
               publicPath: '/public'
             }
           },

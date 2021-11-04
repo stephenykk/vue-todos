@@ -1,4 +1,5 @@
 <script>
+import { Vue, isVue3 } from 'vue-demi'
 import Hello from './hello';
 
 export default {
@@ -9,6 +10,7 @@ export default {
         }
     },
     render(h) {
+        h = isVue3 ? Vue.h : h;
         return (
             <div class="todos">
                 <Hello name="alice" />
