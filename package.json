@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue-demi": "^0.11.4"
+    "vue-demi": "latest"
   },
   "peerDependencies": {
     "@vue/composition-api": "1.x",
