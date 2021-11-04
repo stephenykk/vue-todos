@@ -18,6 +18,7 @@ module.exports = function (env) {
 
     entry: {
       index: resolve('src/index.ts'),
+      example: resolve('example/index.ts')
     },
     output: {
       path: resolve('dist'),
@@ -59,7 +60,10 @@ module.exports = function (env) {
         '@': resolve('src')
       },
       modules: ['node_modules'],
-      extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
+      extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
+    },
+    externals: {
+      'vue-todos': 'VueTodos'
     },
     module: {
       rules: [
@@ -108,13 +112,20 @@ module.exports = function (env) {
       }),
       new ProgressbarWebpackPlugin(),
       new VueLoaderPlugin(),
+      // new HtmlWebpackPlugin({
+      //   title: 'vue-todos',
+      //   template: resolve('./template/index.html'),
+      //   filename: 'index.html',
+      //   chunks: ['index'],
+      //   inject: 'body'
+      // }),
       new HtmlWebpackPlugin({
-        title: 'vue-todos',
+        title: 'vue-todos-example',
         template: resolve('./template/index.html'),
         filename: 'index.html',
-        chunks: ['index'],
+        chunks: ['example'],
         inject: 'body'
-      }),
+      })
     ]
   };
 };

@@ -2,7 +2,7 @@
     <div class="todos">
         <h1>todo list</h1>
         <ul>
-            <li v-for="lang in languages" :key="lang">coding by {lang}</li>
+            <li v-for="lang in languages" :key="lang">coding by {{lang}}</li>
         </ul>
     </div>
 </template>
