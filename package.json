@@ -1,6 +1,6 @@
 {
   "name": "vue-todos",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "vue todos component compitable with vue2/3",
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "vue": "^2.0.0 || >=3.0.0-rc.0"
   },
   "peerDependenciesMeta": {
-    "@vue/composition-api":{
+    "@vue/composition-api": {
       "optional": true
     }
   },
