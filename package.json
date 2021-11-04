@@ -1,6 +1,6 @@
 {
   "name": "vue-todos",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "vue todos component compitable with vue2/3",
   "main": "dist/index.js",
   "scripts": {
