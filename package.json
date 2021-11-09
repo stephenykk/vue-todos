@@ -4,8 +4,8 @@
   "description": "vue todos component compitable with vue2/3",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build-test": "webpack",
+    "dev": "webpack-dev-server --config example/webpack.config.js",
+    "build:todos": "webpack -w",
     "build": "webpack --env NODE_ENV=production",
     "release": "npm run build && npm version minor && npm publish"
   },

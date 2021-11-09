@@ -13,7 +13,7 @@ export default {
         h = isVue3 ? Vue.h : h;
         return (
             <div class="todos">
-                <Hello name="alice" />
+                <Hello name="alice alice-fine" />
                 <h1>TODO LIST ShowCase</h1>
                 <ul>
                     {this.languages.map(language => {

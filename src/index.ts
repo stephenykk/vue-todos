@@ -5,7 +5,6 @@ import Todos from '@/todos.vue';
 const version = VERSION
 
 function install(Vue: any, options: Record<string, any>) {
-    debugger;
     Vue.component(Todos.name, Todos);
 }
 

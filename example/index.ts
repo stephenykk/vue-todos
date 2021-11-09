@@ -1,11 +1,15 @@
 import { Vue } from 'vue-demi';
+
+// const VueDemi = require('vue-demi')
+
 // import VueTodos from '../src/index'
-import VueTodos from 'vue-todos';
+// import VueTodos from '../dist/index.js';
+
 import App from './app.vue';
+const VueTodos = require('../dist/index.js');
 
 // @ts-ignore
 Vue.use(VueTodos);
-console.log('🚀 ~ file: index.ts ~ line 8 ~ VueTodos', VueTodos)
 
 // @ts-ignore
 console.log('%cVue.version:', 'color: green;', Vue.version);
