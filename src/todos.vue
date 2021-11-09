@@ -1,6 +1,9 @@
 <script>
-import { Vue, isVue3 } from 'vue-demi'
+import { isVue3 } from 'vue-demi'
 import Hello from './hello';
+import h3 from '@/utils/h3';
+
+import './todos.scss';
 
 export default {
     name: 'todos',
@@ -10,7 +13,7 @@ export default {
         }
     },
     render(h) {
-        h = isVue3 ? Vue.h : h;
+        h = isVue3 ? h3 : h;
         return (
             <div class="todos">
                 <Hello name="alice alice-fine" />
@@ -25,17 +28,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-.todos {
-    h1 {
-        color: orangered;
-        border-bottom: 1px dashed #ccc;
-    }
-    ul, li {
-        list-style: none;
-        line-height: 2;
-        color: burlywood;
-    }
-}
-</style>

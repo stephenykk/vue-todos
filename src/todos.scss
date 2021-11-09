@@ -1,0 +1,11 @@
+.todos {
+  h1 {
+      color: orangered;
+      border-bottom: 1px dashed #ccc;
+  }
+  ul, li {
+      list-style: none;
+      line-height: 2;
+      color: burlywood;
+  }
+}
